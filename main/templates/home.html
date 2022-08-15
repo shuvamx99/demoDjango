@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}HomePage{%endblock%}
+{% block content %}
+<h3>Quiz App</h3>
+
+<p>
+    Tech stack used for this project: Django, Bootstrap, jQuery
+</p>
+
+{% if user.is_authenticated %}
+<div  class="float-right">
+<a href="{% url 'logout' %}" style="text-decoration:none" >Logout</a>
+</div>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{category.title}}{%endblock%}
+{% block content %}
+<h2 class="my-4 ">Result</h2>
+<table class="table">
+    <thead>
+    <tr> 
+        <th>#</th>
+        <th>Question</th>
+        <th>Submitted answer</th>
+        <th>Correct answer</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in result %}
+        <tr>
+            <td>{{row.id}}</td>
+            <td>{{row.question}}</td>
+            {% comment %} {% if row.right_answer == row.question.right_opt%}
+            <td class="bg-success text-white">{{row.right_answer}}</td>
+            {% else %}
+            <td class="bg-danger text-white">{{row.right_answer}}</td>
+            {% endif %}
+            <td>{{row.question.right_opt}}</td> {% endcomment %}
+            {% if row.right_answer == "Not Submitted"%}
+            <td class="bg-warning text-white">{{row.right_answer}}</td>
+            {% elif row.right_answer == row.question.right_opt %}
+            <td class="bg-success text-white">{{row.right_answer}}</td>
+            {% else %}
+            <td class="bg-danger text-white">{{row.right_answer}}</td>
+            {% endif %}
+            <td>{{row.question.right_opt}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2 class="my-4 ">Test Details</h2>
+<table class="table">
+
+    <tr> 
+        <th>Total Attempted Questions</th>
+        <td>{{attempted}}</td>
+        
+    </tr>
+    <tr> 
+        <th>Total Skipped Questions</th>
+        <td>{{skipped}}</td>
+    </tr>
+    <tr> 
+        <th>Correct Attempts</th>
+        <td>{{correct}}</td>
+    </tr>
+    <tr> 
+        <th>Incorrect Attempts</th>
+        <td>{{incorrect}}</td>
+    </tr>
+    <tr> 
+        <th>Marks Obtained</th>
+        <td>{{marks}}</td>
+    </tr>
+
+   
+</table>
+
+{% endblock %}
