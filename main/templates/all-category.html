@@ -5,11 +5,11 @@
 <div class="row">
     {% for category in data%}
     <div class="col-md-3">
-        <div class="card">
+        <div class="card" style="border:2px solid blue">
             <a href="{% url 'category_questions' category.id %}"><img src="{{category.image.url}}" class="card-img-top" alt="{{category.title}}"></a>
             {% comment %} <div class="card-body">
                 <h5 class="card-text"><a href="{% url 'category_questions' category.id %}">{{category.title}}</a></h5>
-            </div>  {% endcomment %}
+            </div>   {% endcomment %}
         </div>
     </div>
     {% endfor %}

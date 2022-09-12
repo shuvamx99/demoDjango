@@ -52,7 +52,7 @@ def submit_answer(request,cat_id,question_id):
                 for row in result:
                     if row.right_answer == row.question.right_opt:
                         correct=correct+1
-                    elif row.right_answer != "Not Submoitted":
+                    elif row.right_answer != "Not Submitted":
                         incorrect=incorrect+1
                 marks = correct - incorrect
             

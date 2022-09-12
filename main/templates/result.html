@@ -36,8 +36,8 @@
     </tbody>
 </table>
 
-<h2 class="my-4 ">Test Details</h2>
-<table class="table">
+{% comment %} <h2 class="my-4 ">Test Details</h2>
+<table class="table"> {% endcomment %}
 
     {% comment %} <tr> 
         <th>Total Attempted Questions</th>
@@ -48,7 +48,7 @@
         <th>Total Skipped Questions</th>
         <td>{{skipped}}</td>
     </tr> {% endcomment %}
-    <tr> 
+    {% comment %} <tr> 
         <th>Correct Attempts</th>
         <td>{{correct}}</td>
     </tr>
@@ -59,7 +59,7 @@
     <tr> 
         <th>Marks Obtained</th>
         <td>{{marks}}</td>
-    </tr>
+    </tr> {% endcomment %}
 
    
 </table>

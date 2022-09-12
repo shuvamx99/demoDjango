@@ -1,16 +1,62 @@
 {% extends 'base.html' %}
 {% block title %}HomePage{%endblock%}
 {% block content %}
-<h3>Quiz App</h3>
 
-<p>
-    Tech stack used for this project: Django, Bootstrap, jQuery
-</p>
+
+<div style=" text-shadow:2px 2px grey; ">
+<h2 style="padding-up:40px; padding-bottom:30px;  background-color: DodgerBlue ; box-shadow: 3px 3px grey; text-align: center; ">Quiz App</h2>
+
+
+<div>
+    <h4 style=" padding:20px ;background-color: DeepSkyBlue; box-shadow: 2px 2px grey" >
+        About the Project :
+    </h4>
+</div>
+
+<div>
+    <h4 style=" padding:20px ;background-color: DeepSkyBlue; box-shadow: 2px 2px grey" >
+        Quiz Application where registered users can give a test under a time bounded scenario
+    </h4>
+</div>
+
+<div>
+    <h4 style=" padding:20px ;background-color: DeepSkyBlue; box-shadow: 2px 2px grey" >
+        Technologies and Frameworks Used : 
+    </h4>
+</div>
+
+
+<div>
+    <h4 style="padding:20px ; background-color: DeepSkyBlue ; box-shadow: 2px 2px  grey" >
+        Frontend: HTML, Bootstrap, jQuery, Backend: Django
+    </h4>
+</div>
+
+<div>
+    <h4 style=" padding:20px ; background-color: DeepSkyBlue; box-shadow: 2px 2px  grey" >
+        Features : 
+    </h4>
+</div>
+
+<div>
+    <h4 style=" padding:20px ; background-color: DeepSkyBlue ; box-shadow: 2px 2px  grey" >
+        Add a new Course,
+        Add Questions for any course,
+        Register a User,
+        Give tests on any course
+    </h4>
+</div>
 
 {% if user.is_authenticated %}
-<div  class="float-right">
-<a href="{% url 'logout' %}" style="text-decoration:none" >Logout</a>
+<div class="float-right ">
+<a href="{% url 'logout' %}" style="text-decoration : none; color: white; font-size:20px; padding:525px "  >Logout</a>
 </div>
 
 {% endif %}
+</div>
+
+
+
+
+
 {% endblock %}

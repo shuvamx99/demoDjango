@@ -9,7 +9,7 @@
     <title>Login Page</title>
     
 </head>
-<body>
+<body style="background-color:DarkBlue; color:white">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -35,10 +35,10 @@
         </div>
       </nav>
 
-    <div class="container my-4" >
+    <div class="container my-4" style="background-color:DarkBlue; color:white">
         <h2 class="my-4">Login</h2>
         <form method="post" action="">
-            <table class="table table-bordered">
+            <table class="table table-bordered" style="color:white">
                 {% csrf_token %}
                 {{form.as_table}}
                 <tr>
